@@ -1,0 +1,20 @@
+{
+  "FORM_FAILURE": "Chyba ve formuláři: ",
+    "INIT_EXTERNAL_FORM_FAILED": "Nelze inicializovat url externího formuláře: musí být poskytnuto buď id úlohy nebo klíč definice procesu. Zkuste obnovit stránku a zkuste to znovu.",
+    "TASK_EXTERNAL_FORM_NOTE": "Tato úloha vyžaduje externí formulář k dokončení. Pro otevření externího formuláře klikněte na odkaze \"Otevřít externí formulář\".",
+    "PROCESS_EXTERNAL_FORM_NOTE": "Tento proces vyžaduje externí formulář ke spuštění nové instance procesu. Pro otevření externího formuláře klikněte na odkaze \"Otevřít externí formulář\".",
+    "USE_GENERIC_FORM": "Můžete nastavit proměnné použitím všeobecného formuláře kliknutím na odkaze \"Přidat proměnnou\".",
+    "EXTERNAL_FORM_LINK": "Otevřít externí formulář",
+    "SAVE_HINT": "Uložit aktuální stav formuláře k pozdějšímu dokončení",
+    "ADD_VARIABLE": "Přidat proměnnou",
+    "NAME": "Název",
+    "TYPE": "Typ",
+    "VALUE": "Hodnota",
+    "VARIABLE_NAME": "Název proměnné",
+    "VARIABLE_TYPE": "Typ proměnné",
+    "LOAD_VARIABLES": "Načíst proměnné",
+    "LOAD_VARIABLES_FAILURE": "Nezdařilo se načtení proměnné",
+    "BUSINESS_KEY": "Business klíč",
+    "NO_TASK_VARIABLES": "Úloha neobsahuje proměnné",
+    "REQUIRE_UNIQUE_NAME": "Název musí být unikátní"
+}

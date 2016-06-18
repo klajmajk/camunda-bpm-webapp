@@ -27,67 +27,67 @@ import org.camunda.bpm.webapp.impl.security.auth.UserAuthentication;
  */
 public class SecurityActions {
 
-  public static <T> T runWithAuthentications(SecurityAction<T> action, Authentications authentications) {
+    public static <T> T runWithAuthentications(SecurityAction<T> action, Authentications authentications) {
 
-    List<Authentication> currentAuthentications = authentications.getAuthentications();
-    try {
-      for (Authentication authentication : currentAuthentications) {
-        authenticateProcessEngine(authentication);
-      }
+        List<Authentication> currentAuthentications = authentications.getAuthentications();
+        try {
+            for (Authentication authentication : currentAuthentications) {
+                authenticateProcessEngine(authentication);
+            }
 
-      return action.execute();
+            return action.execute();
 
-    } finally {
-      for (Authentication authentication : currentAuthentications) {
-        clearAuthentication(authentication);
-      }
+        } finally {
+            for (Authentication authentication : currentAuthentications) {
+                clearAuthentication(authentication);
+            }
+        }
     }
-  }
 
-  private static void clearAuthentication(Authentication authentication) {
-    ProcessEngine processEngine = Cockpit.getProcessEngine(authentication.getProcessEngineName());
+    private static void clearAuthentication(Authentication authentication) {
+        ProcessEngine processEngine = Cockpit.getProcessEngine(authentication.getProcessEngineName());
     if(processEngine != null) {
-      processEngine.getIdentityService().clearAuthentication();
-    }
-  }
-
-  private static void authenticateProcessEngine(Authentication authentication) {
-
-    ProcessEngine processEngine = Cockpit.getProcessEngine(authentication.getProcessEngineName());
-    if (processEngine != null) {
-
-      String userId = authentication.getIdentityId();
-      List<String> groupIds = null;
-      List<String> tenantIds = null;
-
-      if (authentication instanceof UserAuthentication) {
-        UserAuthentication userAuthentication = (UserAuthentication) authentication;
-        groupIds = userAuthentication.getGroupIds();
-        tenantIds = userAuthentication.getTenantIds();
-      }
-
-      processEngine.getIdentityService().setAuthentication(userId, groupIds, tenantIds);
-    }
-  }
-
-  public static <T> T runWithoutAuthentication(SecurityAction<T> action, ProcessEngine processEngine) {
-
-    final IdentityService identityService = processEngine.getIdentityService();
-    org.camunda.bpm.engine.impl.identity.Authentication currentAuth = identityService.getCurrentAuthentication();
-
-    try {
-      identityService.clearAuthentication();
-      return action.execute();
-
-    } finally {
-      identityService.setAuthentication(currentAuth);
-
+            processEngine.getIdentityService().clearAuthentication();
+        }
     }
 
-  }
+    private static void authenticateProcessEngine(Authentication authentication) {
 
-  public static interface SecurityAction<T> {
-    public T execute();
-  }
+        ProcessEngine processEngine = Cockpit.getProcessEngine(authentication.getProcessEngineName());
+        if (processEngine != null) {
+
+            String userId = authentication.getIdentityId();
+            List<String> groupIds = null;
+            List<String> tenantIds = null;
+
+            if (authentication instanceof UserAuthentication) {
+                UserAuthentication userAuthentication = (UserAuthentication) authentication;
+                groupIds = userAuthentication.getGroupIds();
+                tenantIds = userAuthentication.getTenantIds();
+            }
+
+            processEngine.getIdentityService().setAuthentication(userId, groupIds, tenantIds);
+        }
+    }
+
+    public static <T> T runWithoutAuthentication(SecurityAction<T> action, ProcessEngine processEngine) {
+
+        final IdentityService identityService = processEngine.getIdentityService();
+        org.camunda.bpm.engine.impl.identity.Authentication currentAuth = identityService.getCurrentAuthentication();
+
+        try {
+            identityService.clearAuthentication();
+            return action.execute();
+
+        } finally {
+            identityService.setAuthentication(currentAuth);
+
+        }
+
+    }
+
+    public static interface SecurityAction<T> {
+        public T execute();
+    }
 
 }

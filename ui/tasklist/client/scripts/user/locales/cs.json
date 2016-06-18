@@ -1,0 +1,15 @@
+{
+  "LOGGED_IN": "Teď jste přihlášen.",
+    "CREDENTIALS_ERROR": "Nelze se přihlásit s tímto credential.",
+    "USERNAME": "Uživatelské jméno",
+    "PASSWORD": "Heslo",
+    "PLEASE_SIGN_IN": "Prosím, přihlaste se",
+    "LOGIN": "Přihlásit se",
+    "SIGN_IN_ACTION": "Přihlásit se",
+    "SIGN_OUT_ACTION": "Odhlásit se",
+    "MY_PROFILE": "Můj profil",
+    "LOGGED_OUT": "Jste odhlášený.",
+    "USER_NAME": "Jméno uživatele",
+    "SESSION_EXPIRED": "Vaše relace vypršela.",
+    "SESSION_EXPIRED_MESSAGE": "Musíte se znovu přihlásit."
+}

@@ -1,0 +1,100 @@
+{
+    "VARIABLE_VALUE": "Hodnota",
+    "dateLocales": {
+        "months": [
+            "Leden",
+            "Únor",
+            "Březen",
+            "Duben",
+            "Květen",
+            "Červen",
+            "Červenec",
+            "Srpen",
+            "Záři",
+            "Říjen",
+            "Listopad",
+            "Prosinec"
+        ],
+        "monthsShort": [
+            "Led",
+            "Úno",
+            "Bře",
+            "Dub",
+            "Kvě",
+            "Čer",
+            "Čec",
+            "Srp",
+            "Žář",
+            "Říj",
+            "Lis",
+            "Pro"
+        ],
+        "weekdays": [
+            "Neděle",
+            "Pondělí",
+            "Úterý",
+            "Štředa",
+            "Čtvrtek",
+            "Pátek",
+            "Sobota"
+        ],
+        "weekdaysShort": [
+            "Ne",
+            "Po",
+            "Út",
+            "St",
+            "Čt",
+            "Pá",
+            "So"
+        ],
+        "weekdaysMin": [
+            "Ne",
+            "Po",
+            "Út",
+            "St",
+            "Čt",
+            "Pá",
+            "So"
+        ],
+        "longDateFormat": {
+            "LT": "HH:mm",
+            "L": "DD/MM/YYYY",
+            "LL": "D MMMM YYYY",
+            "LLL": "D MMMM YYYY LT",
+            "LLLL": "dddd, D MMMM YYYY LT"
+        },
+        "calendar": {
+            "sameDay": "[Dnes v] LT",
+            "nextDay": "[Zítra v] LT",
+            "nextWeek": "dddd [v] LT",
+            "lastDay": "[Včéra v] LT",
+            "lastWeek": "[Last] dddd [at] LT",
+            "sameElse": "L"
+        },
+        "relativeTime": {
+            "future": "in %s",
+            "past": "%s před",
+            "s": "několik sekund",
+            "m": "minuta",
+            "mm": "%d minut",
+            "h": "hodina",
+            "hh": "%d hodin",
+            "d": "den",
+            "dd": "%d dnů",
+            "M": "měsíc",
+            "MM": "%d měsíců",
+            "y": "rok",
+            "yy": "%d let"
+        },
+        "week": {
+            "dow": 1,
+            "doy": 4
+        },
+        "CREATE_TASK": "Vytvořit úlohu",
+        "NEW_TASK_NAME": "Název",
+        "NEW_TASK_ASSIGNEE": "Přiřazený řešitel",
+        "NEW_TASK_TENANT_ID": "Tenant Id",
+        "NEW_TASK_DESCRIPTION": "Popis",
+        "TASK_SAVE_ERROR": " Ukládání úlohy selhalo"
+    }
+}

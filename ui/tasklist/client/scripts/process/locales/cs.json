@@ -1,0 +1,9 @@
+{
+    "PROCESS_NAME": "Název procesu",
+    "PROCESS_START_OK": "Proces byl spuštěn.",
+    "PROCESS_START_ERROR": "Nebylo možné spustit proces.",
+    "SEARCH_PROCESS_BY_NAME": "Vyhledávání podle názvu procesů.",
+    "NO_PROCESS_DEFINITION_AVAILABLE": "Nejsou žádné definice procesů k dispozici.",
+    "START_PROCESS": "Spustit proces",
+    "CLICK_PROCESS_TO_START": "Kliknutím se zahájí proces."
+}
