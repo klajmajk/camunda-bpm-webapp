@@ -1,11 +1,107 @@
-/*
+
 .navbar-brand {
-  text-indent: -999em;
-  background-image: url(./path/to/the/logo.png);
-  width: 80px;
+      background-repeat: no-repeat;
+      background-position: 20px center;
+      background-image: url(../assets/images/logo.png);
+      line-height: 50px !important;
+      height: 50px !important;
+      color: #fff !important;
 }
 
 [cam-widget-header] {
-  border-bottom-color: blue;
+      border-bottom: 0px solid #b5152b;
+      background-color: #3c8dbc;
+      color: #FFFFFF;
+}         
+
+[cam-widget-header] a {
+      color: #ffffff; 
 }
-*/
+
+[cam-widget-header] [ng-transclude] li>view>a {
+      display: block;  
+      height: 50px;
+      padding: 0 10px;
+      
+      line-height: 50px !important;
+}
+
+[cam-widget-header] [ng-transclude] li:hover>view>a, [cam-widget-header] [ng-transclude] li:focus>view>a{
+      background-color: #367FAA;
+      color: #ffffff; 
+}
+
+[cam-widget-header] .app-menu>ul>li>a{
+      display: block;  
+      height: 50px;
+      padding: 0 10px;          
+      line-height: 50px !important;
+}
+
+[cam-widget-header] .app-menu>ul>li:hover>a, [cam-widget-header] .app-menu>ul>li:focus>a{
+      background-color: #367FAA;
+      color: #ffffff;
+}
+
+[cam-widget-header] [ng-transclude] {
+    border-right: 1px solid #367FAA;
+}
+
+ 
+
+
+.brand-logo {
+      display: none;
+}
+  
+.brand-name {
+      padding-left: 80px;
+}
+
+.page-wrap {
+    top: 50px;
+}
+
+.three-cols-layout .column-left .list-unstyled>.item.active, .three-cols-layout .column-center .list-unstyled>li.active, .three-cols-layout .column-left .list-unstyled>.item.active:hover, .three-cols-layout .column-center .list-unstyled>li.active:hover{
+       border-color: #357CA5;
+}
+
+.three-cols-layout .column-left .list-unstyled>.item:hover, .three-cols-layout .column-center .list-unstyled>li:hover{
+       border-color: #B5BBC8;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #367fa9;
+}
+
+.btn-primary:visited{
+    color: #fff;
+    background-color: #357ca5;
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #357ca5;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+}
+
+.btn {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border-bottom: 3px solid #357CA5;
+}
+.nav-tabs>li>a:hover, .nav-tabs>li>a:focus{
+      border-bottom: 3px solid #B5BBC8;
+}
+

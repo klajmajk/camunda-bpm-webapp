@@ -11,10 +11,10 @@ var camTasklistConf = {
   //   "long":   "LLLL"
   // },
   //
-  // "locales": {
-  //    "availableLocales": ["en", "de"],
-  //    "fallbackLocale": "en"
-  //  },
+   "locales": {
+      "availableLocales": ["en", "cs"],
+      "fallbackLocale": "en"
+    },
   //
   // // custom libraries and scripts loading and initialization,
   // // see: http://docs.camunda.org/guides/user-guide/#tasklist-customizing-custom-scripts

@@ -1,0 +1,15 @@
+{
+   "EMPTY_VALUE": "&lt;Empty&gt;",
+    "TASK_VARIABLES": "Proměnné",
+    "VARIABLE_OBJECT_TYPE_NAME": "Object Type Name",
+    "VARIABLE_VALUE_INFO": "Informace o hodnotě",
+    "VARIABLE_SERIALIZATION_DATA_FORMAT": "Serializace formátu data",
+    "DOWNLOAD": "Stáhnout",
+    "LESS_VARIABLES": "Zobrazit míň proměnných",
+    "MORE_VARIABLES": "Zobrazit víc proměnných",
+    "UNDEFINED_VARIABLE": "&lt;Undefined&gt;",
+    "TOGGLE": "Přepínač",
+    "SERIALIZED": "Serializovaný",
+    "DESERIALIZED": "Deserializovaný",
+    "DESERIALIZATION_ERROR": "Chyba deserializace"
+}

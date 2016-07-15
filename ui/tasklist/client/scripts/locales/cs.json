@@ -67,12 +67,12 @@
             "sameDay": "[Dnes v] LT",
             "nextDay": "[Zítra v] LT",
             "nextWeek": "dddd [v] LT",
-            "lastDay": "[Včéra v] LT",
+            "lastDay": "[Včera v] LT",
             "lastWeek": "[Last] dddd [at] LT",
             "sameElse": "L"
         },
         "relativeTime": {
-            "future": "in %s",
+            "future": "za %s",
             "past": "%s před",
             "s": "několik sekund",
             "m": "minuta",
