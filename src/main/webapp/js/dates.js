@@ -15,7 +15,7 @@ function getDate(dateIsoFormat, desiredFormatMask) {
 }
 
 function allign2digits(number) {
-    if (number < 10 && number >= 0) return '0' + number;
+    if (number < 10 && number >= 0) return '0' + parseInt(number);
     return number;
 }
 
@@ -46,3 +46,4 @@ function getIsoFromHumanDate(humanDate) {
 
     return getIsoDate(day, month, year);
 }
+
