@@ -17,7 +17,9 @@ package org.camunda.bpm.webapp.impl.security.auth;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,14 +31,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Adam
  */
-
-@WebServlet(name = "ImpersonationServlet", urlPatterns = {"/ImpersonationServlet"})
+//@WebServlet(name = "ImpersonationServlet", urlPatterns = {"/ImpersonationServlet"})
 public class ImpersonationServlet extends HttpServlet {
-    
+
     private static Map<String, String> mapping = new HashMap<String, String>();
 
-   
-    
+    private static final List<String> admins = Arrays.asList("klimaada", "hronzrad");
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -50,30 +50,31 @@ public class ImpersonationServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        mapping.put( request.getHeader("REMOTE_USER"), request.getParameter("username"));
-        PrintWriter out = response.getWriter();
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ImpersonationServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ImpersonationServlet at " + request.getContextPath() + "</h1>");
-            
-            out.println("username: "+request.getParameter("username"));
-            out.println("</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
+        if (admins.contains(request.getHeader("REMOTE_USER"))) {
+            mapping.put(request.getHeader("REMOTE_USER"), request.getParameter("username"));
+            PrintWriter out = response.getWriter();
+            try {
+                /* TODO output your page here. You may use following sample code. */
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet ImpersonationServlet</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Servlet ImpersonationServlet at " + request.getContextPath() + "</h1>");
+                out.println("username: " + request.getParameter("username"));
+                out.println("</body>");
+                out.println("</html>");
+            } finally {
+                out.close();
+            }
         }
     }
-    
+
     public static String getUsername(String loggedUsername) {
         return mapping.get(loggedUsername);
-    }   
-    
+    }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

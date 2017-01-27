@@ -137,12 +137,12 @@
         <servlet-name>Engine Api</servlet-name>
         <url-pattern>/api/engine/*</url-pattern>
     </servlet-mapping>
-    <servlet>
+<!--    <servlet>
         <servlet-name>ImpersonationServlet</servlet-name>
         <servlet-class>org.camunda.bpm.webapp.impl.security.auth.ImpersonationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ImpersonationServlet</servlet-name>
         <url-pattern>/ImpersonationServlet</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 </web-app>
